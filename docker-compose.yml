@@ -1,0 +1,12 @@
+aerospike:
+    image: aerospike/aerospike-server
+    volumes:
+        - "/etc/aerospike:/etc/aerospike"
+        - "/opt/aerospike/data:/opt/aerospike/data"
+        - "./aerospike.conf:/etc/aerospike/aerospike.conf"
+    restart: always
+    ports:
+        - "3000:3000"
+        - "3001:3001"
+        - "3002:3002"
+        - "3003:3003"
